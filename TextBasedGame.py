@@ -1,83 +1,45 @@
- 
 answer_N = ["N", "n", "North", "north"]
- 
 answer_S = ["S", "s", "South", "south"]
- 
 answer_E = ["E", "e", "East", "east"]
- 
 answer_W = ["W", "w", "West", "west"]
- 
 pickup = ["yes", "Yes", "Get", "get", "take", "Take", "pickup", "Pickup"]
- 
 nopickup = ["no", 'No']
- 
 blaster = 0
- 
 chest = 0
- 
 helmet = 0
- 
 boots = 0
- 
 pants = 0
- 
- 
+
 required = "\nYou entered an invalid option, please try again...\n"
  
  
- 
 def lounge():
- 
     print("You have been teleported to lounge of the USS Starship and you\n"
- 
           "have just been informed that your help is needed to take care of\n"
- 
           "some unknown creature that has gotten loose inside the Cargo Bay.\n"
- 
           "You will need to first find the proper gear to confront the unknown\n"
- 
           "creature to ensure your survival. There are five pieces of gear you\n"
- 
           "will need to find to confront the creature safely...")
- 
     print("   North: Bridge\n   South: Hanger\n   West: Armory")
- 
     choice = input(">>> ")
- 
     if choice in answer_N:
- 
         bridge()
- 
     elif choice in answer_S:
- 
         hanger()
- 
     elif choice in answer_W:
- 
         armory()
- 
     else:
- 
         print(required)
- 
         lounge()
  
  
- 
 def bridge():
- 
     global blaster
- 
     global chest
- 
     global helmet
- 
     global boots
- 
     global pants
- 
     if chest == 0:
- 
         print("Bridge")
  
         print(">>A Chest Plate is laying in the corner of the room. Do you want to pick it up???<<")
